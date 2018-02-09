@@ -1,0 +1,16 @@
+{ "pintro_area":"datahub",
+  "wlan":"wlan0",
+  "max_play_time":40,
+  "google_analytics_tracking_id":"UA-59068737-5",
+  "mac": {
+        "c4:61:8b:17:36:c6":
+            {
+            "user_name":"rubenmak",
+            "mp3_name":"rubenmak.mp3"
+            },
+        "68:fb:7e:b6:3b:8b":
+            {
+            "user_name":"erikdriessen",
+            "mp3_name":"erikdriessen.mp3"
+            }
+        }}
