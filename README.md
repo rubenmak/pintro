@@ -9,10 +9,15 @@ In this repository, we share the hardware requirements, what information you nee
 ## 1. Hardware requirements
 To get started with Pintro Tunes, you need hardware. For one Pintro Tunes system, you'll need:
 
-- A Raspberry Pi (with power adapter and sd card).
-- A W311MA USB Wifi Dongle - [Example product link](https://www.lightinthebox.com/nl/tenda-w311ma-150mbps-draadloze-n150-high-power-usb-adapter-draadloze-netwerkkaart-wifi-ontvanger-wi-fi-card-ap-functie_p5446216.html) *You need a W311MA type dongle to sniff for WIFI MAC addresses*.
-- An ethernet cable.
+- A Raspberry Pi (with power adapter and sd card (Raspbian)).
+- A Wifi Dongle with a driver that supports monitor mode on ARM (Raspberry Pi)
+    - rt2800usb is that works stable to our knowledge. For example: [Tenda W311MA](https://www.lightinthebox.com/nl/tenda-w311ma-150mbps-draadloze-n150-high-power-usb-adapter-draadloze-netwerkkaart-wifi-ontvanger-wi-fi-card-ap-functie_p5446216.html), [Tenda W322U](https://www.amazon.de/dp/B002IJA5J2/ref=pe_386171_38075861_TE_item), [Tenda W311M](https://wikidevi.com/wiki/Tenda_W311M)
+    - Don't try the ath9k_htc driver, the unstable monitor mode on ARM destroyed many of our SD cards (destroyed as in: made completely useless you can't even reburn the image)
+    - We found other drivers that were supposed to support monitor mode, but didn't support it on the pi (due to ARM chipset)
+    - Double check whether the dongle you want to purchase truly uses the rt2800usb, sometimes a new version uses different driver (and it's often not easy to find out the exact version)
+    - If anybody discovers different dongles and/or drivers that work in stable monitor mode on the Pi, please share!
 - Speakers with a standard audio jack.
+- To track data in Google Analytics, you need internet access (wifi or ethernet).
 
 To set up remote access to the Pintro Tunes system (only required for your initial setup):
 
