@@ -10,11 +10,11 @@ In this repository, we share the hardware requirements, what information you nee
 To get started with Pintro Tunes, you need hardware. For one Pintro Tunes system, you'll need:
 
 - A Raspberry Pi (with power adapter and sd card).
-- A W311MA USB Wifi Dongle - [Example product link](https://www.lightinthebox.com/nl/tenda-w311ma-150mbps-draadloze-n150-high-power-usb-adapter-draadloze-netwerkkaart-wifi-ontvanger-wi-fi-card-ap-functie_p5446216.html) *You need a W311MA type dongle to sniff for WIFI MAC addresses*
+- A W311MA USB Wifi Dongle - [Example product link](https://www.lightinthebox.com/nl/tenda-w311ma-150mbps-draadloze-n150-high-power-usb-adapter-draadloze-netwerkkaart-wifi-ontvanger-wi-fi-card-ap-functie_p5446216.html) *You need a W311MA type dongle to sniff for WIFI MAC addresses*.
 - An ethernet cable.
 - Speakers with a standard audio jack.
 
-To setup the Pintro Tunes system:
+To set up remote access to the Pintro Tunes system (only required for your initial setup):
 
 - A monitor with standard HDMI cable.
 - A Keyboard.
@@ -34,6 +34,42 @@ For our team, we collect this data through a Google Form, where users automatica
 
 ## 3. Running Pintro
 
-Start by getting the remote IP address of your Raspberry Pi. It'll make setting up Pintro easier! When you launch your system (with keyboard, screen and ethernet cable connected!), hit `Ctrl+Alt+F1` to access the terminal, and type `hostname -I` to view your remote IP address. After that, use a program like Putty to access your Raspbery Pi, or use your FTP manager of choice to put files on it. 
+Start by getting the remote IP address of your Raspberry Pi. It'll make setting up Pintro easier! When you launch your system (with a keyboard, screen and an ethernet cable connected!), hit `Ctrl+Alt+F1` to access the terminal, and type `hostname -I` to view your remote IP address. After that, use a program like Putty to access your Raspberry Pi, or use your FTP manager of choice to put files on it. 
+
+Add `config.json` and `pintro.py` to your Raspberry Pi through FTP. 
+
+**Configuration**
+
+First, edit the `config.json` file. You can change the following fields:
+
+- `pintro_area`: the area your tracking attendance in. This value will be used as the event category.
+- `max_play_time`: the maximum play time for your mp3 files. 
+- `google_analytics_tracking_id`: the tracking id for your GA property. Leave blank if you don't want track users.
+- `mac`: the object that holds our user data. For each user list:
+
+```
+"ma:ca:dd:re:ss:01": {
+  {
+    "user_name":"usernamevalue",
+    "mp3_name":"file.mp3"
+  }
+}
+```
+
+Keep in mind that the `user_name` will be used as the event action in Google Analytics. You might not want to send actual names to GA. 
+
+**Running Pintro**
+
+Access your Pi through [Putty](https://www.putty.org/). After that, install the following tools on your Pi:
+
+```sudo apt-get install aircrack-ng screen tcpdump omxplayer```
+
+You can now open a virtual screen on your Pi with the `screen` command. Now all you have to do is run the `pintro.py` file:
+
+```
+python3 pintro.py
+```
+
+When Pintro is done initialising, it should print 'start'. After that, make sure to detach yourself from the virtual screen with the `Ctrl+A+D` shortcut. If you ever want to open the virtual screen again, run `screen -r`. 
 
 
