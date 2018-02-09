@@ -48,7 +48,8 @@ Add `config.json` and `pintro.py` to your Raspberry Pi through FTP.
 First, edit the `config.json` file. You can change the following fields:
 
 - `pintro_area`: the area your tracking attendance in. This value will be used as the event category.
-- `max_play_time`: the maximum play time for your mp3 files. 
+- `wlan`: the wlan interface you're using. If you have a Pi 3B or use another wifi dongle, it will probably be wlan1. If you aren't/haven't used wifi on the Pi, it will probably be wlan1. If you're not sure: the output of pintro.py when starting the monitor mode shows you which wlan has which driver, look for the wlan with rt2800usb.
+- `max_play_time`: the maximum play time for your mp3 files.
 - `google_analytics_tracking_id`: the tracking id for your GA property. Leave blank if you don't want track users.
 - `mac`: the object that holds our user data. For each user list:
 
