@@ -1,16 +1,16 @@
 { "pintro_area":"datahub",
   "wlan":"wlan0",
   "max_play_time":40,
-  "google_analytics_tracking_id":"UA-59068737-5",
+  "google_analytics_tracking_id":"UA-12345-1",
   "mac": {
-        "c4:61:8b:17:36:c6":
+        "ma:ca:dd:re:ss:01":
             {
-            "user_name":"rubenmak",
-            "mp3_name":"rubenmak.mp3"
+            "user_name":"username",
+            "mp3_name":"username_song.mp3"
             },
-        "68:fb:7e:b6:3b:8b":
+        "ma:ca:dd:re:ss:02":
             {
-            "user_name":"erikdriessen",
-            "mp3_name":"erikdriessen.mp3"
+            "user_name":"anotherusername",
+            "mp3_name":"anotherusername_song.mp3"
             }
         }}
