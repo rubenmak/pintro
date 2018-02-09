@@ -6,12 +6,12 @@ In this repository, we share the hardware requirements, what information you nee
 
 *At [Superweek](http://www.superweek.hu/) 2018, the Pintro project was a finalist for the Golden Punchcard Prize. A prize where you 'demonstrate any digital analytics solution or method of your own that is way beyond the defaults'.*
 
-# 1. Hardware requirements
+## 1. Hardware requirements
 To get started with Pintro Tunes, you need hardware. For one Pintro Tunes system, you'll need:
 
 - A Raspberry Pi (with power adapter and sd card).
 - A W311MA USB Wifi Dongle - [Example product link](https://www.lightinthebox.com/nl/tenda-w311ma-150mbps-draadloze-n150-high-power-usb-adapter-draadloze-netwerkkaart-wifi-ontvanger-wi-fi-card-ap-functie_p5446216.html) *You need a W311MA type dongle to sniff for WIFI MAC addresses*
-- An Ethernet cable.
+- An ethernet cable.
 - Speakers with a standard audio jack.
 
 To setup the Pintro Tunes system:
@@ -32,8 +32,8 @@ To get attendance data and give people their personal intro tune, you'll need to
   
 For our team, we collect this data through a Google Form, where users automatically give their consent for tracking! \#iamnotalawyer
 
-# Running Pintro
+## 3. Running Pintro
 
-Start by getting the remote IP address of your Raspberry Pi. When you launch your system, hit `Ctrl+Alt+F1` to access the terminal, and type `hostname -I` to view your remote IP address. After that, use a program like Putty to access your Raspbery Pi, or use your FTP manager of choice to put files on it. 
+Start by getting the remote IP address of your Raspberry Pi. It'll make setting up Pintro easier! When you launch your system (with keyboard, screen and ethernet cable connected!), hit `Ctrl+Alt+F1` to access the terminal, and type `hostname -I` to view your remote IP address. After that, use a program like Putty to access your Raspbery Pi, or use your FTP manager of choice to put files on it. 
 
 
